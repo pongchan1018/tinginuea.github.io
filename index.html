@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="UTF-8">
+    <title>Audio player HTML5</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/AudioPlayer.css">
+    <style>
+
+    #player{
+        position: relative;
+        max-width: 700px;
+        height: 500px;
+        border: solid 1px gray;
+    }
+    </style>
+  </head>
+
+  <body>
+      <!-- Audio player container-->
+     <div id='player'></div>
+
+    <!-- Audio player js begin-->
+    <script src="js/AudioPlayer.js"></script>
+
+    <script>
+        // test image for web notifications
+        var iconImage = null;
+
+        AP.init({
+            container:'#player',//a string containing one CSS selector
+            volume   : 0.5,
+            autoPlay : true,
+            notification: false,
+            playList: [
+                {'icon': iconImage, 'title': '陳零九、邱鋒澤-最後一秒鐘', 'file': 'mp3/九澤CP【最後一秒鐘 Last Second】電視劇「無神之地不下雨」片頭曲 Official Music Video.mp3'},
+                {'icon': iconImage, 'title': '邱鋒澤-日環食', 'file': 'mp3/邱鋒澤 FENG ZE『日環食Eclipse 』MV.mp3'},
+                {'icon': iconImage, 'title': '邱鋒澤-SHINING STAR', 'file': 'mp3/邱鋒澤 FENG ZE 【SHINING STAR】OFFICIAL MV.mp3'},
+                {'icon': iconImage, 'title': '邱鋒澤-預言家', 'file': 'mp3/邱鋒澤 FENG ZE 『預言家』 Prophet Official Music Video.mp3'},
+                {'icon': iconImage, 'title': '茄子蛋-閣愛妳一擺', 'file': 'mp3/茄子蛋EggPlantEgg - 閣愛妳一擺 Love You One More Time (Official Music Video).mp3'},
+                {'icon': iconImage, 'title': '韋禮安-因為是你', 'file': 'mp3/韋禮安 WeiBird《因為是你 Just Stay with Me》MV - 公視 myVideo 原創影集「火神的眼淚」片頭曲.mp3'},
+                {'icon': iconImage, 'title': '韋禮安-如果可以', 'file': 'mp3/韋禮安 WeiBird《如果可以 Red Scarf》MV - 電影「月老」主題曲導演親剪音樂視角版.mp3'},
+                {'icon': iconImage, 'title': '黃明志-出去走走', 'file': 'mp3/黃明志 Ft. 韓國瑜 2020年高雄觀光主題曲【出去走走 Getaway to Kaohsiung】.mp3'},
+                {'icon': iconImage, 'title': '黃明志、陳芳語-玻璃心', 'file': 'mp3/聽見玻璃心碎的聲音... 黃明志 Ft.陳芳語【玻璃心】@鬼才做音樂 2021 Ghosician.mp3'},
+                {'icon': iconImage, 'title': '張惠妹、艾怡良、徐佳瑩-傲嬌', 'file': 'mp3/aMEI張惠妹 feat. 艾怡良、徐佳瑩 [ 傲嬌Catfight ] Official Music Video.mp3'},
+                {'icon': iconImage, 'title': 'CHING G SQUAD-COCONUT TREE', 'file': 'mp3/CHING G SQUAD -【 COCONUT TREE 】 MV (婁峻碩SHOU,ChrisFlow唐仲彣,高爾宣OSN,RĒD°芮德).mp3'},
+                {'icon': iconImage, 'title': 'Some Day', 'file': 'mp3/Some Day - Joe Layne [Music Video] Happiness OstBgm (해피니스).mp3'},
+                {'icon': iconImage, 'title': '五堅情-All Day', 'file': 'mp3/W0LF(S) 五堅情 邱鋒澤 FENG ZE，陳零九 NINE CHEN，黃偉晉WAYNE，賴晏駒 LAI，婁峻碩SHOU【ALL DAY】MV.mp3'},
+                {'icon': iconImage, 'title': '八三么-無誠勿愛', 'file': 'mp3/八三夭 831 【無誠勿愛 No Sincerity No Love】台視 八大偶像劇 「徵婚啟事 Mr. Right Wanted」 主題曲 Official Music Video.mp3'},
+                {'icon': iconImage, 'title': '王靖雯-忘了沒有', 'file': 'mp3/王靖雯不胖 - 忘了沒有【動態歌詞】「每一個失眠夜晚 你的晚安變成孤單 只能在回憶中 擁抱我」♪.mp3'},
+                {'icon': iconImage, 'title': '王靖雯-善變', 'file': 'mp3/王靖雯不胖 - 善變【動態歌詞】「從前你穿越風雨都會倉促見一面 後來連傘的邊緣你都懶得分一點」♪.mp3'},
+                {'icon': iconImage, 'title': '告五人-在這座城市遺失了你', 'file': 'mp3/告五人 Accusefive [ 在這座城市遺失了你 Where I Lost Us ] Official Music Video .mp3'},
+                {'icon': iconImage, 'title': '告五人-你要不要吃哈密瓜', 'file': 'mp3/告五人 Accusefive【你要不要吃哈密瓜】Official Live Music Video.mp3'},
+                {'icon': iconImage, 'title': '告五人-帶我去找夜生活', 'file': 'mp3/告五人 Accusefive【帶我去找夜生活 Night life.Take us to the light】Official Music Video.mp3'},
+                {'icon': iconImage, 'title': '八三么-我不想你想你了', 'file': 'mp3/我不想你想你了.mp3'},
+                {'icon': iconImage, 'title': '李友廷-難過到這邊就好', 'file': 'mp3/李友廷 Yo Lee《難過到這邊就好》 demo.mp3'},
+                {'icon': iconImage, 'title': '胡66-都怪我', 'file': 'mp3/胡66 - 都怪我【動態歌詞】「我怎麼忘也忘不掉 偽裝我從沒受過傷」♪.mp3'},
+                {'icon': iconImage, 'title': '茄子蛋-愛情你比我想的閣較偉大', 'file': 'mp3/茄子蛋EggPlantEgg - 愛情你比我想的閣較偉大 (Official Music Video)《當男人戀愛時》電影主題曲.mp3'},
+                {'icon': iconImage, 'title': '茄子蛋-閣愛妳一擺', 'file': 'mp3/茄子蛋EggPlantEgg - 閣愛妳一擺 Love You One More Time (Official Music Video).mp3'},
+                {'icon': iconImage, 'title': '蔡恩雨-如果可以', 'file': 'mp3/韋禮安《如果可以》Cover ( 蔡恩雨 Priscilla Abby).mp3'},
+                {'icon': iconImage, 'title': '陳零九、邱鋒澤-天亮請睜眼', 'file': 'mp3/陳零九 Nine Chen feat. 邱鋒澤 FENG ZE【天亮請睜眼 Daylight】「終極狼人殺」遊戲主題曲 Official Music Video.mp3'},
+                {'icon': iconImage, 'title': '陳零九、韋禮安-再也不要', 'file': 'mp3/陳零九 Nine Chen feat. 韋禮安 WeiBird【再也不要 Never Again】東森戲劇「美味滿閣」片尾曲 Official Music Video (4K).mp3'},
+                {'icon': iconImage, 'title': '陳零九-千年以後', 'file': 'mp3/陳零九 Nine Chen【千年以後 After A Thousand Years】三立台視 神幻旗艦大戲『天巡者』片尾曲 Official Music Video.mp3'},
+                {'icon': iconImage, 'title': '陳零九-煙雨', 'file': 'mp3/陳零九 Nine Chen【煙雨 Misty Rain】電視劇「無神之地不下雨」插曲 Official Music Video.mp3'},
+                {'icon': iconImage, 'title': '魏奇奇-愛存在', 'file': 'mp3/魏奇奇『 愛,存在』MV-『 流星花園』片尾曲.mp3'},
+          ]
+        });
+    </script>
+    <!-- Audio player js end-->
+
+  </body>
+</html>
